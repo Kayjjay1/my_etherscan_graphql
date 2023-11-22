@@ -1,0 +1,28 @@
+type Query {
+  etherBalanceByAddress: ETH_RESULT!
+  totalSupplyOfEther: ETH_RESULT!
+  latestEthereumPrice: ETH_PRICE!
+  blockConfirmationTime: ETH_RESULT!
+}
+
+"""
+List down all fields returned from provided APIs
+"""
+type ETH_RESULT {
+  status: String!
+  message: String!
+  result: String!
+}
+
+type ETH_PRICE {
+  status: String!
+  message: String!
+  result: ETH_PRICE_RESULT!
+}
+
+type ETH_PRICE_RESULT {
+  ethbtc: String!
+  ethbtc_timestamp: String!
+  ethusd: String!
+  ethusd_timestamp: String!
+}
